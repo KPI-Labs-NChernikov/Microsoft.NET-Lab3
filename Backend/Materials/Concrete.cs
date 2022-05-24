@@ -24,7 +24,7 @@ namespace Backend.Materials
                 $"Durability class: B{DurabilityClass}{Environment.NewLine}" +
                 $"Frost resistance: F{FrostResistance}{Environment.NewLine}" +
                 $"Water resistance: W-{WaterResistance}{Environment.NewLine}" +
-                $"Price: {Price} UAH{Environment.NewLine}" +
+                $"Price: {Price:F2} UAH{Environment.NewLine}" +
                 $"Maximum delivery per day: {MaxPerDay} m^3";
         }
     }

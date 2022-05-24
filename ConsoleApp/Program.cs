@@ -6,5 +6,7 @@ Console.WriteLine("Hello, World!");
 
 var order = new Order();
 order.Cement.Material = new KropyvnytskyiFactory().CreateCement();
+order.Cement.Demand = 1000;
 var mats = order.Materials;
-Console.WriteLine();
+Console.WriteLine($"{order.MinDeliveryTime.Days} days {order.MinDeliveryTime.Hours} hours");
+Console.WriteLine(order.Cement.Material);

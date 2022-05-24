@@ -18,7 +18,7 @@ namespace Backend.Materials
         {
             return $"Reinforced concrete slab M{DurabilityMark}:{Environment.NewLine}" +
                 $"Size (l x w x h): {Length} x {Width} x {Height}{Environment.NewLine}" +
-                $"Price: {Price} UAH{Environment.NewLine}" +
+                $"Price: {Price:F2} UAH{Environment.NewLine}" +
                 $"Maximum delivery per day: {MaxPerDay} items";
         }
     }

@@ -11,7 +11,7 @@ namespace Backend.Materials
         public override string ToString()
         {
             return $"Cement M{DurabilityMark}:{Environment.NewLine}" +
-                $"Price: {Price} UAH{Environment.NewLine}" +
+                $"Price: {Price:F2} UAH{Environment.NewLine}" +
                 $"Maximum delivery per day: {MaxPerDay} m^3";
         }
     }

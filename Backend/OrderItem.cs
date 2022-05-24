@@ -8,6 +8,7 @@ namespace Backend
 
         public K Demand { get; set; }
 
-        public static implicit operator OrderItem<IMaterial, K>(OrderItem<T, K> item) => item;
+        public static implicit operator OrderItem<IMaterial, K>(OrderItem<T, K> item) 
+            => new() { Material = item.Material, Demand = item.Demand};
     }
 }

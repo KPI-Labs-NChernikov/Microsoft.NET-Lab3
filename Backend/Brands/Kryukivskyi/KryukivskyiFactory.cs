@@ -3,7 +3,7 @@ using Backend.Materials;
 
 namespace Backend.Brands.Kryukivskyi
 {
-    internal class KryukivskyiFactory : IAbstractFactory
+    public class KryukivskyiFactory : IAbstractFactory
     {
         public Cement CreateCement() => new KryukivskyiCement();
 

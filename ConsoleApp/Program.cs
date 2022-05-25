@@ -1,12 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Backend;
-using Backend.Brands.Kropyvnytskyi;
+﻿using Backend;
+using ConsoleApp.Helpers;
+using ConsoleApp.Printers;
 
-Console.WriteLine("Hello, World!");
-
-var order = new Order();
-order.Cement.Material = new KropyvnytskyiFactory().CreateCement();
-order.Cement.Demand = 1000;
-var mats = order.Materials;
-Console.WriteLine($"{order.MinDeliveryTime.Days} days {order.MinDeliveryTime.Hours} hours");
-Console.WriteLine(order.Cement.Material);
+var _color = ConsoleColor.DarkGreen;
+Console.ForegroundColor = _color;
+var _order = new Order();
+HelperMethods.PrintHeader(HelperMethods.GetHeader("Set up"));
+var form = new NumberForm<decimal>
+{
+    Min = 0,
+    Name = "demand for concrete (m^3)",
+    Parser = decimal.TryParse,
+    StringHandler = (string str) => str.Replace('.', ',')
+};
+_order.Concrete.Demand = form.GetNumber();
+form.Name = "demand for cement (m^3)";
+_order.Cement.Demand = form.GetNumber();
+var slabForm = new NumberForm<uint>
+{
+    Name = "demand for reinforced concrete slabs (items)",
+    Parser = uint.TryParse
+};
+_order.Slab.Demand = slabForm.GetNumber();
+var printer = new OrderPrinter(_order);
+printer.Print();
+Console.ResetColor();

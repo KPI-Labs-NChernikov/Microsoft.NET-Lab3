@@ -4,7 +4,7 @@ namespace ConsoleApp.Printers
 {
     public class PricelistPrinter : IPrinter
     {
-        private PricelistContainer _pricelist;
+        private readonly PricelistContainer _pricelist;
 
         public PricelistPrinter(PricelistContainer pricelist)
         {

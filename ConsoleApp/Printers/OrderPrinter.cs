@@ -8,12 +8,7 @@ namespace ConsoleApp.Printers
 {
     public class OrderPrinter : IPrinter
     {
-        private readonly Order _order;
-
-        public OrderPrinter(Order order)
-        {
-            _order = order ?? throw new ArgumentNullException(nameof(order));
-        }
+        private readonly Order _order = OrderContainer.Order;
 
         private static void PrintMaterial(IMaterial? material, string name, decimal demand)
         {
@@ -45,7 +40,7 @@ namespace ConsoleApp.Printers
             Console.WriteLine("Total:");
             Console.WriteLine($"Cost: {_order.Cost} UAH");
             Console.WriteLine($"Delivery time: {HelperMethods.GetTimeSpanString(_order.MinDeliveryTime)}");
-            Console.WriteLine();
+            Console.WriteLine($"{Environment.NewLine}");
             var menu = new LiteMenu
             {
                 IsQuitable = true,

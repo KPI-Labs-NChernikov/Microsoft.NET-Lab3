@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Backend.PricelistContainer">
+    <Position X="10" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAACAAAAAAAAAAAAAAAAAACAAABAAA=</HashCode>
+      <FileName>PricelistContainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_factory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Backend.OrderItem&lt;T, K&gt;">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQ=</HashCode>
+      <FileName>OrderItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Order">
+    <Position X="13" Y="4.25" Width="1.5" />
+    <AssociationLine Name="Cement" Type="Backend.OrderItem&lt;T, K&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="14.125" Y="4.25" />
+        <Point X="14.125" Y="3.747" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.013" Y="0.196" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Concrete" Type="Backend.OrderItem&lt;T, K&gt;" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="13.188" Y="4.25" />
+        <Point X="13.188" Y="3.747" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.026" Y="0.218" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Slab" Type="Backend.OrderItem&lt;T, K&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="14.375" Y="4.25" />
+        <Point X="14.375" Y="3.747" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.66" Y="0.196" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Materials" Type="Backend.OrderItem&lt;T, K&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="4.937" />
+        <Point X="12.323" Y="4.937" />
+        <Point X="12.323" Y="2.688" />
+        <Point X="13" Y="2.688" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.119" Y="0.12" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAACAAAAAAAQBAAgAAAAAAEAAAAgAAAAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cement" />
+      <Property Name="Concrete" />
+      <Property Name="Slab" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Materials" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Backend.Materials.Slab">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAAAAFEAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Materials\Slab.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Materials.Concrete">
+    <Position X="1.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAACAFEACAAAAAAAAAAABAAAAAAAAAIAA=</HashCode>
+      <FileName>Materials\Concrete.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Materials.Cement">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAFEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Materials\Cement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Extensions.MaterialExtensions">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\MaterialExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kryukivskyi.KryukivskyiSlab" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAAAABEAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kryukivskyi\KryukivskyiSlab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kryukivskyi.KryukivskyiFactory" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kryukivskyi\KryukivskyiFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Brands.Kryukivskyi.KryukivskyiConcrete" Collapsed="true">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAACABEACAAAAAAAAAAABAAAAAAAAAIAA=</HashCode>
+      <FileName>Brands\Kryukivskyi\KryukivskyiConcrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kryukivskyi.KryukivskyiCement" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kryukivskyi\KryukivskyiCement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kropyvnytskyi.KropyvnytskyiSlab" Collapsed="true">
+    <Position X="4.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAAAABEAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kropyvnytskyi\KropyvnytskyiSlab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kropyvnytskyi.KropyvnytskyiFactory" Collapsed="true">
+    <Position X="7.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kropyvnytskyi\KropyvnytskyiFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Brands.Kropyvnytskyi.KropyvnytskyiConcrete" Collapsed="true">
+    <Position X="1.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAACABEACAAAAAAAAAAABAAAAAAAAAIAA=</HashCode>
+      <FileName>Brands\Kropyvnytskyi\KropyvnytskyiConcrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kropyvnytskyi.KropyvnytskyiCement" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kropyvnytskyi\KropyvnytskyiCement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kreisel.KreiselSlab" Collapsed="true">
+    <Position X="4.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAAAABEAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kreisel\KreiselSlab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kreisel.KreiselFactory" Collapsed="true">
+    <Position X="7.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kreisel\KreiselFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Brands.Kreisel.KreiselConcrete" Collapsed="true">
+    <Position X="1.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAACABEACAAAAAAAAAAABAAAAAAAAAIAA=</HashCode>
+      <FileName>Brands\Kreisel\KreiselConcrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Brands.Kreisel.KreiselCement" Collapsed="true">
+    <Position X="3" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brands\Kreisel\KreiselCement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Backend.Interfaces.IMaterial">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Backend.Interfaces.IAbstractFactory">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAbstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

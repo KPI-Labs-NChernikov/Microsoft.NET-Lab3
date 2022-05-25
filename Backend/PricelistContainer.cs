@@ -27,5 +27,14 @@ namespace Backend
                 material = _factory.CreateSlab();
             return material;
         }
+
+        public string Brand
+        {
+            get
+            {
+                var name = _factory.GetType().Name;
+                return name.Remove(name.IndexOf("Factory"));
+            }
+        }
     }
 }

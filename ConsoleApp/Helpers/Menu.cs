@@ -8,7 +8,7 @@
 
         public ConsoleColor Color { get; set; } = ConsoleColor.DarkGreen;
 
-        public IEnumerable<(string Text, Action? Action)> Items { get; set; } = new List<(string Text, Action? Action)>();
+        public ICollection<(string Text, Action? Action)> Items { get; set; } = new List<(string Text, Action? Action)>();
 
         public void Print(bool closeAfter = false)
         {
@@ -28,15 +28,15 @@
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"0. Quit{Environment.NewLine}");
                 Console.ForegroundColor = Color;
-                Console.WriteLine($"Select the number from 0 to {Items.Count()}: ");
+                Console.WriteLine($"Select the number from 0 to {Items.Count}: ");
                 bool parsed;
                 parsed = int.TryParse(Console.ReadLine(), out int selected);
-                while (!parsed || selected < 0 || selected > Items.Count())
+                while (!parsed || selected < 0 || selected > Items.Count)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Error: wrong number");
                     Console.ForegroundColor = Color;
-                    Console.WriteLine($"Please, select the number from 0 to {Items.Count()} once more");
+                    Console.WriteLine($"Please, select the number from 0 to {Items.Count} once more");
                     parsed = int.TryParse(Console.ReadLine(), out selected);
                 }
                 if (selected != 0)

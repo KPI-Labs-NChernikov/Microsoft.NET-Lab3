@@ -17,8 +17,8 @@ namespace ConsoleApp.Printers
             {
                 var brand = material.GetType().Name;
                 brand = brand.Remove(brand.IndexOf(name));
-                Console.WriteLine($"{brand} {material.DurabilityMark}");
-                Console.WriteLine($"Cost: {material.GetCost(demand)} UAH");
+                Console.WriteLine($"{brand} M{material.DurabilityMark}");
+                Console.WriteLine($"Cost: {material.GetCost(demand):F2} UAH");
                 var deliveryTime = material.GetDeliveryTime(demand);
                 Console.WriteLine($"Delivery time: {HelperMethods.GetTimeSpanString(deliveryTime)}");
             }
@@ -38,7 +38,7 @@ namespace ConsoleApp.Printers
             Console.WriteLine($"2. Reinforced concrete slabs: needed {_order.Slab.Demand} items");
             PrintMaterial(_order.Slab.Material, "Slab", _order.Slab.Demand);
             Console.WriteLine("Total:");
-            Console.WriteLine($"Cost: {_order.Cost} UAH");
+            Console.WriteLine($"Cost: {_order.Cost:F2} UAH");
             Console.WriteLine($"Delivery time: {HelperMethods.GetTimeSpanString(_order.MinDeliveryTime)}");
             Console.WriteLine($"{Environment.NewLine}");
             var menu = new LiteMenu
